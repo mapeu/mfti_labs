@@ -22,14 +22,14 @@ FOR_SKY = (48, 213, 200)
 rect(screen, FOR_SKY, (0, 0, 400, 180))  # skies
 rect(screen, FOR_SEA, (0, 180, 400, 100))  # sea
 rect(screen, YELLOW, (0, 280, 400, 120))  # beach
-x, y = 10, 280
+x, y = 10, 260
 for i in range(8):
-    circle(screen, YELLOW, (x, y), 52)
-    x += 52
-    y += 5
-    circle(screen, FOR_SEA, (x, y), 52)
-    x += 52
-    y -= 5
+    circle(screen, FOR_SEA, (x, y), 40, draw_bottom_left=True, draw_bottom_right=True)
+    x += 68
+    y += 159 ** 0.5 + 30
+    circle(screen, YELLOW, (x, y), 40, draw_top_left=True, draw_top_right=True)
+    x += 68
+    y -= 159 ** 0.5 + 30
 
 
 def draw_sun(x, y, radius, screen, color):  # sun
