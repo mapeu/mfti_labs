@@ -14,7 +14,7 @@ class Rect:
         self.width = width
         self.color = (randint(1, 255), randint(1, 255), randint(1, 255))
         self.speed = randint(1, 10) / 10
-        self.vector = [randint(-1, 1), randint(-1, 1)]# куда двигается
+        self.vector = [randint(-10, 10) / 10, randint(-10, 10) / 10]# куда двигается
 
 
     def draw_rect(self, screen: pygame.display):#Рисуем квадратик
@@ -27,5 +27,7 @@ class Rect:
     def check_wall(self):#Проверяем столкнулись ли со стеной, если да, то двигаемся в другую сторону
         if self.x >= 1000 - self.width or self.x <= 0:
             self.vector[0] *= -1
+            self.vector[1] = randint(-10, 10) / 10
         if  self.y >= 1000 - self.width or self.y <= 0:
+            self.vector[0] = randint(-10, 10) / 10
             self.vector[1] *= -1

@@ -15,7 +15,7 @@ with open("leaderboard.txt", "r") as file:#Выгужаем игроков
 
 pygame.init()# Запустили pygame
 
-FPS = 20#Задали частоту кадров
+FPS = 60#Задали частоту кадров
 screen = pygame.display.set_mode((1000, 1000))#Создали экран
 
 pygame.display.update()

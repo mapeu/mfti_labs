@@ -27,5 +27,8 @@ class Ball:
     def check_wall(self):#ПРоверка на столкновение, если столкнулись двигаемся в противоположном направлении
         if self.x >= 1000 or self.x <= 0:
             self.vector[0] *= -1
+            self.vector[1] = randint(-1, 1)
+
         if  self.y >= 1000 or self.y <= 0:
+            self.vector[0] = randint(-1, 1)
             self.vector[1] *= -1
