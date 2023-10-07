@@ -50,7 +50,7 @@ while not finished:#Основной цикл, чтобы можно было и
 pygame.quit()#Завершаю всё
 
 users[username] = get_score()#Добавляем нового юзера
-users = dict(sorted(users.items(), key = lambda item: int(item[1])))#Сортирум юзеров
+users = dict(sorted(users.items(), key = lambda item: int(item[1]), reverse = True))#Сортирум юзеров
 save_users(users, username)#Сохраняем их
 
 
