@@ -61,7 +61,7 @@ class Ball(Projectile):
             self.vx *= -1
 
         if self.y + self.r >= 600:
-            self.y += self.vy - 10 * (50 - self.live) - self.live
+            self.vy = -self.vy + 10 * (50 - self.live)
 
     def draw(self):# Рисуем шарик, если он уже долго живет - удаляем
         global projectiles
