@@ -9,7 +9,7 @@ class Gun:
     def ready_shoot(self, event):
         self.power += 1
 
-    
+
 
 
 
